@@ -2,10 +2,13 @@
 	require "config.php";
 	require "models/db.php";
 	require "models/product.php";
+	require "models/manufacture.php";
 	$products = new Product;
+	$manu = new Manufacture;
 
 	$getallproduct = $products->getAllProducts();
-$getFeature = $products->getFeaturedProducts();
+	$getFeature = $products->getFeaturedProducts();
+	$getAllManu = $manu->getAllManu();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -173,19 +176,19 @@ $getFeature = $products->getFeaturedProducts();
 
 		<!-- NAVIGATION -->
 		<nav id="navigation">
-			<!-- container -->
+			<!-- container --> 
 			<div class="container">
 				<!-- responsive-nav -->
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
-						<li><a href="#">Categories</a></li>
-						<li><a href="#">Laptops</a></li>
-						<li><a href="#">Smartphones</a></li>
-						<li><a href="#">Cameras</a></li>
-						<li><a href="#">Accessories</a></li>
+						<li class="active"><a href="index.php">Home</a></li>
+						<?php
+						foreach($getAllManu as $value):
+						?>
+						<li><a href="products.php?manu_id = <?php echo $value['manu_id'] ?>">
+						<?php echo $value['manu_name'] ?> </a></li>
+						<?php endforeach ?>
 					</ul>
 					<!-- /NAV -->
 				</div>
