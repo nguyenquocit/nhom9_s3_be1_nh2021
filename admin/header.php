@@ -2,7 +2,11 @@
     require "config.php";
     require "models/db.php";
     require "models/product.php";
+    require "models/manufacture.php";
+    require "models/protype.php";
     $product = new Product;
+    $manu = new Manufacture;
+    $protype = new Protype;
 
 ?>
 <!DOCTYPE html>
@@ -216,6 +220,14 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="addproduct.php" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Add Products
               </p>
             </a>
           </li>
