@@ -64,4 +64,12 @@ class Product extends Db
         $sql->bind_param("i", $id);
         return $sql->execute();
     }
+
+    public function editProduct($id, $name,$manu_id,$type_id,$price,$image,$desc, $feature){
+        $sql = self::$connection->prepare(" UPDATE `products` SET `name`= ?,`manu_id`= ?,`type_id`= ?,`price`= ?,`image`= ?,`descriotion`= ?,`feature`= ? WHERE `id` = ?");
+        $sql->bind_param("siiissii", $name,$manu_id,$type_id,$price,$image,$desc,$feature,$id);
+        //var_dump("UPDATE `products` SET `name`= $name,`manu_id`= $manu_id,`type_id`= $type_id,`price`= $price,`image`= $image,`descriotion`= $desc,`feature`= $feature WHERE `id` = $id");
+        //die();
+        return $sql->execute();
+    }
 }
