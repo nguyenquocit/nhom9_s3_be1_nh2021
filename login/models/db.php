@@ -1,12 +1,4 @@
 <?php
-session_start();
-if(!isset($_SESSION['user'])){
-    header('location:../login/index.php');
-}
-if(isset($_POST['logout'])){
-    unset($_SESSION['username'],$_SESSION['password']);
-    header('location:../login/index.php');   
-}
 class Db
 {
     public static $connection;
