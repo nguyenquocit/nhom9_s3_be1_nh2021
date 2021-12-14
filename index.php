@@ -95,10 +95,6 @@ include "header.php"
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?>" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
-												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
@@ -107,7 +103,9 @@ include "header.php"
 												<div class="product-btns">
 													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<form action="details.php" method="GET">
+													<a href="details.php?id=<?php echo $value['id'] ?>">PRODUCT DETAILS</a>
+													</form>
 												</div>
 											</div>
 											<div class="add-to-cart">
@@ -207,28 +205,28 @@ include "header.php"
 								<!-- tab -->
 								<div id="tab2" class="tab-pane fade in active">
 									<div class="products-slick" data-nav="#slick-nav-2">
-										<?php foreach($getFeaturea as $value): ?>
+										<?php foreach($getFeature as $value): ?>
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
 												<img src="./img/<?php echo $value['image'] ?> " alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
-												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-												<h4 class="product-price"><?php echo number_format($value['price'])?> VND</h4>
+												<h3 class="product-name" name="name"><a href="#"><?php echo $value['name'] ?></a></h3>
+												<h4 class="product-price" name="price"><?php echo number_format($value['price'])?> VND</h4>
 												<div class="product-btns">
 													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
 													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<form action="details.php" method="GET">
+													<a href="details.php?id=<?php echo $value['id'] ?>">PRODUCT DETAILS</a>
+													</form>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+													<form action="order.php" method="GET">
+													<button class="add-to-cart-btn" type="submit" name="submit" ><i class="fa fa-shopping-cart"></i><a href="order.php?id=<?php echo $value['id'] ?>">ADD TO CART</a></button>
+													</form>
 											</div>
 										</div>
 										<!-- /product -->

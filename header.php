@@ -115,7 +115,7 @@
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
+										<span>Your Wishlist</span>
 										<div class="qty">3</div>
 									</a>
 									<div class="cart-dropdown">
@@ -186,7 +186,7 @@
 						<?php
 						foreach($getAllManu as $value):
 						?>
-						<li><a href="products.php?manu_id = <?php echo $value['manu_id'] ?>">
+						<li><a href="products.php?manu_id=<?php echo $value['manu_id'] ?>">
 						<?php echo $value['manu_name'] ?> </a></li>
 						<?php endforeach ?>
 					</ul>
