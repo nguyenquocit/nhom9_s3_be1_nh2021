@@ -4,6 +4,8 @@
     require "models/product.php";
     require "models/manufacture.php";
     require "models/protype.php";
+    require "models/user.php";
+    $user = new User;
     $product = new Product;
     $manu = new Manufacture;
     $protype = new Protype;
@@ -231,6 +233,22 @@
               </p>
             </a>
           </li>
+          <li class="nav-item menu-open">
+            <a href="addmanufacture.php" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Add Manufacture
+              </p>
+            </a>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="addprotype.php" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Add Protype
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
@@ -248,15 +266,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/project-add.html" class="nav-link">
+                <a href="manufacture.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Manufactures</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/project-edit.html" class="nav-link">
+                <a href="protype.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Protype</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="user.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User</p>
                 </a>
               </li>
             </ul>

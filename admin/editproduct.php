@@ -82,7 +82,7 @@
               </div>
               <div class="form-group">
                 <label for="inputDescription">Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4" name="desc" value ="<?php echo $valuee['descriotion'] ?>" ></textarea>
+                <textarea id="inputDescription" class="form-control" rows="4" name="desc" value="<?php echo $valuee['descriotion'] ?>" ></textarea>
               </div>
               <div class="form-group">
                 <label for="inputClientCompany">Image</label>
@@ -90,11 +90,11 @@
               </div>
               <div class="form-group">
                 <label for="inputClientCompany">Price</label>
-                <input type="text" id="inputClientCompany" class="form-control" name="price">
+                <input type="text" id="inputClientCompany" class="form-control" name="price" value="<?php echo $valuee['price'] ?>">
               </div>
               <div class="form-group">
                 <label for="inputClientCompany">Feature</label>
-                <input type="text" id="inputClientCompany" class="form-control" name="feature">
+                <input type="text" id="inputClientCompany" class="form-control" name="feature" value="<?php echo $valuee['feature'] ?>">
               </div>
             </div>
             <?php

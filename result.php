@@ -248,10 +248,6 @@
 								<div class="product">
 									<div class="product-img">
 										<img src="./img/<?php echo $value['image'] ?>" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NEW</span>
-										</div>
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
@@ -280,7 +276,7 @@
 						<div class="store-filter clearfix">
 							<span class="store-qty">Showing 20-100 products</span>
 							<ul class="store-pagination">
-								<li class="active">1</li>
+							<li class="active">1</li>
 								<li><a href="#">2</a></li>
 								<li><a href="#">3</a></li>
 								<li><a href="#">4</a></li>

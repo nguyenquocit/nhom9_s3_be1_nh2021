@@ -24,10 +24,11 @@ include "header.php"
                                         ?>
 										<!-- product -->
                                         <h3>PRODUCT DETAILS</h3>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/<?php echo $value['image'] ?>" alt="">
-											</div>
+										
+										<div class="product" >
+										<div class="product-img">
+											<img src="./img/<?php echo $value['image'] ?>" alt="" width="100px">
+										</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
 												<h3 class="product-name"><a href="#">Name : <?php echo $value['name'] ?></a></h3>
@@ -39,7 +40,7 @@ include "header.php"
                                                 <h3 class="product-name"><a href="#">Created at : <?php echo $value['created_at'] ?></a></h3>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+											<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="addcart.php?id=<?php echo $value['id'] ?>">ADD TO CART</a></button>
 											</div>
 										</div>
 										<!-- /product -->
